@@ -2,7 +2,6 @@
 
 Tento repozitár demonštruje **event-driven (udalostne riadenú)** architektúru v prostredí cloudu.  
 Každá služba funguje ako nezávislá jednotka, ktorá reaguje na prijaté udalosti a publikuje nové.  
-Okrem toho obsahuje aj jednoduchý **Request-Response** príklad (klasický REST prístup) na porovnanie.
 
 ---
 ## Microservices
