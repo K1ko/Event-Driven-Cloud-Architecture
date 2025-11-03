@@ -26,16 +26,19 @@ def handle_event(event):
             'system',
             f"Order {order_data['order_id']} failed: {order_data['reason']}"
         )
+        event_bus.publish_event('order.final', order_data)
     elif event_type == 'payment.processed':
         send_notification(
             'system',
             f"Payment successful! Order {order_data['order_id']} confirmed"
         )
+        event_bus.publish_event('order.final', order_data)
     elif event_type == 'payment.failed':
         send_notification(
             'system',
             f"Payment failed for order {order_data['order_id']}"
         )
+        event_bus.publish_event('order.final', order_data)
 
 
 def main():
